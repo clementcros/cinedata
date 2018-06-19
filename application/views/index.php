@@ -102,7 +102,7 @@
 							<h1 class="mb30">Simplifiez vous le métier de cinéaste.</h1>
 							<p>
 								<a href="/index.php/form" target="_blank" class="btn btn-primary">Inscription</a> ou
-								<a href="https://vimeo.com/channels/staffpicks/93951774" class="link-watch popup-vimeo">Connection</a>
+								<a href="https://vimeo.com/channels/staffpicks/93951774" class="link-watch popup-vimeo">Connexion</a>
 							</p>
 						</div>
 					</div>
@@ -118,9 +118,9 @@
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 text-center animate-box" data-animate-effect="fadeInUp">
 					<div class="fh5co-heading">
-						<h2>Tous le monde y a accés</h2>
-                        <span>Profesionnel, etudiant ou professeur ? </span>
-                        <p>CINÉDATA regroupe la plupars des services liéer au monde vidéaste afin de vous accompagner tout au long de votre parcour. </p>
+						<h2>Tout le monde y a accès</h2>
+                        <span>Profesionnel, étudiant ou professeur ? </span>
+                        <p>CINÉDATA regroupe la plupart des services liés au monde de l'audiovisuel afin de vous accompagner tout au long de votre parcours. </p>
 					</div>
 				</div>
 			</div>
@@ -131,8 +131,8 @@
 							<i class="icon-graduation-cap"></i>
 						</span>
 						<h3>Étudiant</h3>
-						<p>Nous vous aidons dans vos démarche de projet grace au différentes aides qui sont mis a disposition.</p>
-						<p><a href="#">voir plus</a></p>
+						<p>Nous vous aidons dans vos démarches de projet grâce au différentes aides qui sont mise à disposition.</p>
+						<p><a href="#">Voir plus</a></p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4 ">
@@ -140,9 +140,9 @@
 						<span class="icon">
 							<i class="icon-video"></i>
 						</span>
-						<h3>professionnel</h3>
-						<p>Retrouvez les différents festival du cinéma facile d'accées depuis un espace perso. Nous soummetons votre création aux diféérent acheteur et nosu vous accompagnons dans vos projets</p>
-						<p><a href="#">voir plus</a></p>
+						<h3>Professionnel</h3>
+						<p>Retrouvez les différents festivals du cinéma faciles d'accès depuis votre espace perso. Nous soumettons votre création aux différents acheteurs et vous accompagnons dans vos projets</p>
+						<p><a href="#">Voir plus</a></p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4 ">
@@ -150,9 +150,9 @@
 						<span class="icon">
 							<i class="icon-user"></i>
 						</span>
-						<h3>Proffesseur</h3>
-						<p>Rejoignez notre communauter pour former aux mieux les nouveaux talents de demain grace a notre forum dédier.</p>
-						<p><a href="#">voir plus</a></p>
+						<h3>Professeur</h3>
+						<p>Rejoignez notre communauté pour former au mieux les nouveaux talents de demain grâce à notre forum dédié.</p>
+						<p><a href="#">Voir plus</a></p>
 					</div>
 				</div>
 
@@ -167,7 +167,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading  animate-box">
 <!--					<span>Want Some Cool Stuff</span>-->
 					<h2>Projets Récents</h2>
-					<p>Les derniers projets mis en avants.</p>
+					<p>Les derniers projets mis en avant.</p>
 				</div>
 			</div>
 
@@ -392,7 +392,7 @@
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
+						<small class="block">&copy; 2018 Free HTML5. All Rights Reserved.</small>
 						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://pixeden.com/" target="_blank">Pixeden</a> &amp; <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
 					</p>
 					<p>
