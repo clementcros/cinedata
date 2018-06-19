@@ -84,7 +84,7 @@
 <!--						<li><a href="work.html">Work</a></li>-->
 <!--						<li><a href="about.html"></a></li>-->
 						<li><a href="blog.html">forum</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="contact.html">contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -119,7 +119,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center animate-box" data-animate-effect="fadeInUp">
 					<div class="fh5co-heading">
 						<h2>Tout le monde y a accès</h2>
-                        <span>Profesionnel, étudiant ou professeur ? </span>
+                        <span>Profesionnel, étudiant ou professeur ?</span>
                         <p>CINÉDATA regroupe la plupart des services liés au monde de l'audiovisuel afin de vous accompagner tout au long de votre parcours. </p>
 					</div>
 				</div>
@@ -131,7 +131,7 @@
 							<i class="icon-graduation-cap"></i>
 						</span>
 						<h3>Étudiant</h3>
-						<p>Nous vous aidons dans vos démarches de projet grâce au différentes aides qui sont mise à disposition.</p>
+						<p>Nous vous aidons dans vos démarches de projet grâce au différentes aides qui sont mises à disposition.</p>
 						<p><a href="#">Voir plus</a></p>
 					</div>
 				</div>
@@ -141,7 +141,7 @@
 							<i class="icon-video"></i>
 						</span>
 						<h3>Professionnel</h3>
-						<p>Retrouvez les différents festivals du cinéma faciles d'accès depuis votre espace perso. Nous soumettons votre création aux différents acheteurs et vous accompagnons dans vos projets</p>
+						<p>Retrouvez les différents festivals du cinéma faciles d'accès depuis votre espace perso. Nous soumettons votre création aux différents acheteurs et vous accompagnons dans vos projets.</p>
 						<p><a href="#">Voir plus</a></p>
 					</div>
 				</div>
