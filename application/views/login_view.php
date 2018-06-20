@@ -5,30 +5,36 @@
     <title>Login Page</title>
 </head>
 <body>
-<h1>Login</h1>
+<div class="container">
+    <div class="col-md-12">
+        <div class="row">
+            <h1>Login</h1>
+            <?php
 
-<?php
+            echo form_open('Main/login_action');
 
-echo form_open('Main/login_action');
+            echo validation_errors();
 
-echo validation_errors();
+            echo "<p>Username: ";
+            echo form_input('username', $this->input->post('username'));
+            echo "</p>";
 
-echo "<p>Username: ";
-echo form_input('username', $this->input->post('username'));
-echo "</p>";
+            echo "<p>Password: ";
+            echo form_password('password');
+            echo "</p>";
 
-echo "<p>Password: ";
-echo form_password('password');
-echo "</p>";
+            echo "</p>";
+            echo form_submit('login_submit', 'Login');
+            echo "</p>";
 
-echo "</p>";
-echo form_submit('login_submit', 'Login');
-echo "</p>";
+            echo form_close();
 
-echo form_close();
+            ?>
+            <a class="btn btn-primary" href="<?php echo base_url()."index.php/Main/signin"; ?>" role="button">Inscription</a>
+        </div>
+    </div>
 
-?>
+</div>
 
-<a href='<?php echo base_url()."index.php/Main/signin"; ?>'>Sign In</a>
 </body>
 </html>

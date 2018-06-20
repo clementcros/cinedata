@@ -101,8 +101,8 @@
 						<div class="display-tc animate-box" data-animate-effect="fadeInUp">
 							<h1 class="mb30">Simplifiez vous le métier de cinéaste.</h1>
 							<p>
-								<a href="/index.php/form" target="_blank" class="btn btn-primary">Inscription</a> ou
-								<a href="https://vimeo.com/channels/staffpicks/93951774" class="link-watch popup-vimeo">Connection</a>
+								<a href="<?php echo base_url('index.php/main/signin'); ?>" target="_blank" class="btn btn-primary">Inscription</a> ou
+								<a href='<?php echo base_url('index.php/main'); ?>' >Connection</a>
 							</p>
 						</div>
 					</div>

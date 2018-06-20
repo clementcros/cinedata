@@ -12,11 +12,13 @@ class Scenario extends CI_Controller
 
     public function index(){
         if ($this->session->userdata('currently_logged_in')) {
+            $this->load->view('partial/head');
             $this->load->view('upload');
+            $this->load->view('partial/foot');
         }
         else {
             //redirige a la home page en cas d'accées refuser
-            redirect('');
+            redirect('Main/login');
         }
     }
 

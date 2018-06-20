@@ -10,19 +10,34 @@ class Main extends CI_Controller {
 
     public function login()
     {
-        $this->load->view('login_view');
+        if ($this->session->userdata('currently_logged_in'))
+        {
+            redirect('Account');
+        }
+        else {
+
+            $this->load->view('partial/head');
+            $this->load->view('login_view');
+            $this->load->view('partial/foot');
+        }
     }
 
     public function signin()
     {
+        if ($this->session->userdata('currently_logged_in'))
+        {
+            redirect('Account');
+        }
+        $this->load->view('partial/head');
         $this->load->view('signin');
+        $this->load->view('partial/foot');
     }
 
     public function data()
     {
         if ($this->session->userdata('currently_logged_in'))
         {
-            $this->load->view('data');
+            redirect('Account');
         } else {
             redirect('Main/invalid');
         }
@@ -51,7 +66,9 @@ class Main extends CI_Controller {
             redirect('Main/data');
         }
         else {
+            $this->load->view('partial/head');
             $this->load->view('login_view');
+            $this->load->view('partial/foot');
         }
     }
 
@@ -86,7 +103,7 @@ class Main extends CI_Controller {
 
             return true;
         } else {
-            $this->form_validation->set_message('validation', 'Incorrect username/password.');
+            $this->form_validation->set_message('validation', 'Mot de passe ou nom utilisateur incorecte.');
             return false;
         }
     }
@@ -94,7 +111,7 @@ class Main extends CI_Controller {
     public function logout()
     {
         $this->session->sess_destroy();
-        redirect('Main/login');
+        redirect('');
     }
 
 }
