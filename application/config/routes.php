@@ -55,4 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['form'] = 'Main';
 $route['upload'] = 'Scenario';
 $route['account'] = 'Account';
-//var_dump($route);
+$route ['administration'] = 'Examples';
+$route ['admin'] = 'Admin';
+
+
