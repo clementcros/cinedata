@@ -68,3 +68,13 @@ Acknowledgement
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+
+
+installation du projet :
+
+configurez vos accées a la BDD dans le fichier application/config/database.php
+
+dumper le fichier SQL avec phpmyadmin
+
+voila normalement ça marche ^^ 
