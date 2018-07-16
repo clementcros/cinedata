@@ -14,6 +14,7 @@ class Account extends CI_Controller
     {
         parent::__construct();
         $this->load->model('User_data_model');
+        $this->load->model('Editioncompte_model');
         $this->load->model('Scenario_data_model');
     }
 
@@ -29,7 +30,12 @@ class Account extends CI_Controller
             $data['user'] = $this->User_data_model->get_data($id);
             $data['article'] = $this->Scenario_data_model->getData($id);
            
-           
+           if($data['user'][0]['gender'] == 0){
+               $data['gender'] = 'Un homme';
+           }
+           else {
+               $data['gender'] = 'Une femme';
+           }
 
             $data['url'] = $id;
 
@@ -40,6 +46,35 @@ class Account extends CI_Controller
         else {
             //redirige a la home page en cas d'acc�es refuser
             redirect('main');
+        }
+    }
+
+    public function edit_profile(){
+        if ($this->session->userdata('currently_logged_in')) {
+
+            $user = $this->session->userdata('username');
+            $data['user'] = $this->User_data_model->get_data($user);
+            $this->load->view('partial/head');
+            $this->load->view('edit_acount', $data);
+            $this->load->view('partial/foot');
+        }
+        else{
+            redirect('main');
+        }
+
+    }
+
+    public function validate_profile()
+    {
+
+        $data = $this->input->post();
+        if ($data['passwordinput'] == $data['password_reapeat'])
+        {
+
+            $this->Editioncompte_model->set_data($data);
+        }
+        else {
+            redirect('/Main/signin');
         }
     }
 

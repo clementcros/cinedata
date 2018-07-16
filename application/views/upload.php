@@ -1,4 +1,4 @@
-<form class="form-horizontal">
+<form class="form-horizontal"  action="<?php echo base_url('index.php/Scenario/upload')?>" method="post">
     <fieldset>
 
         <!-- Form Name -->
@@ -46,7 +46,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
             <div class="col-md-4">
-                <button id="singlebutton" name="singlebutton" class="btn btn-success">Valider</button>
+                <button id="Submit" name="Submit" class="btn btn-success">Validé</button>
             </div>
         </div>
 

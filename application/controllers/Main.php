@@ -82,7 +82,6 @@ class Main extends CI_Controller {
     {
         $form_data = $this->input->post();
 
-        var_dump($form_data);
         if ($form_data['passwordinput'] == $form_data['password_reapeat'])
         {
 
