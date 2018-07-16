@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Main extends CI_Controller {
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Inscription_model');
+    }
+
     public function index()
     {
         $this->login();
@@ -28,7 +34,7 @@ class Main extends CI_Controller {
         {
             redirect('Account');
         }
-        $this->load->view('partial/head');
+        $this->load->view('partial/head_loggout');
         $this->load->view('signin');
         $this->load->view('partial/foot');
     }
@@ -74,24 +80,20 @@ class Main extends CI_Controller {
 
     public function signin_validation()
     {
-        $this->load->library('form_validation');
+        $form_data = $this->input->post();
 
-        $this->form_validation->set_rules('username', 'Username', 'trim|xss_clean|is_unique[signup.username]');
-
-        $this->form_validation->set_rules('password', 'Password', 'required|trim');
-
-        $this->form_validation->set_rules('cpassword', 'Confirm Password', 'required|trim|matches[password]');
-
-        $this->form_validation->set_message('is_unique', 'username already exists');
-
-        if ($this->form_validation->run())
+        if ($form_data['passwordinput'] == $form_data['password_reapeat'])
         {
-            echo "Welcome, you are logged in.";
+
+            $this->Inscription_model->set_data($form_data);
         }
         else {
-
-            $this->load->view('signin');
+            redirect('/Main/signin');
         }
+
+        $this->load->view('partial/head_loggout');
+        $this->load->view('sucess');
+        $this->load->view('partial/foot');
     }
 
     public function validation()

@@ -1,47 +1,9 @@
-<div class="container">
-    <div class="col-md-12">
-<!--        <div class="row">-->
-<!--            <h1>Sign In</h1>-->
-<!---->
-<!--            --><?php
-//
-//            echo form_open('Main/signin_validation');
-//
-//            echo validation_errors();
-//
-//            echo "<p>Username:";
-//            echo form_input('email');
-//            echo "</p>";
-//
-//            echo "<p>Password:";
-//            echo form_password('password');
-//            echo "</p>";
-//
-//            echo "<p>Confirm Password:";
-//            echo form_password('cpassword');
-//            echo "</p>";
-//
-//            echo "<p>";
-//            echo form_submit('signin_submit', 'Sign In');
-//            echo "</p>";
-//            echo form_close();
-//
-//            ?>
-<!---->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--<h1>reegtd</h1>-->
-<!--<form name ="user" action="--><?php //echo base_url('index.php/Main/signin_validation')?><!--" method="post">-->
-<!--    Name <input type="text" name="username"> <br/>-->
-<!--    <input type="submit" value="Submit">-->
-<!--</form>-->
 
-<form class="form-horizontal" action="<?php echo base_url('index.php/Main/signin_validation')?>" method="post">
+<form class="form-horizontal" action="<?php echo base_url('index.php/account/validate_profile')?>" method="post">
     <fieldset>
 
         <!-- Form Name -->
-        <legend>Formulaire inscription</legend>
+        <legend>Modifiez vos informations personnelles</legend>
 
         <!-- Select Basic -->
         <div class="form-group">
@@ -128,4 +90,3 @@
 
     </fieldset>
 </form>
-

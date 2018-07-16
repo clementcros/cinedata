@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 16 juil. 2018 à 08:59
+-- Généré le :  lun. 16 juil. 2018 à 13:18
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -59,16 +59,24 @@ CREATE TABLE IF NOT EXISTS `signup` (
   `username` varchar(255) NOT NULL,
   `password` text NOT NULL,
   `email` varchar(255) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `gender` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `signup`
 --
 
-INSERT INTO `signup` (`id`, `username`, `password`, `email`) VALUES
-(1, 'test_1', 'test', 'test@gmail.com'),
-(2, 'admin', 'admin', 'cinedata@gmail.com');
+INSERT INTO `signup` (`id`, `username`, `password`, `email`, `nom`, `prenom`, `status`, `gender`) VALUES
+(1, 'test_1', 'test', 'test@gmail.com', 'cros', 'clement\r\n', '', 0),
+(2, 'admin', 'admin', 'cinedata@gmail.com', '', '', '', 0),
+(3, 'test', 'pass', 'pass', 'cros', 'clement', 'Étudiant', 0),
+(4, 'user', 'mdp', 'mail@gmail.com', 'cros', 'clement', 'Étudiant', 0),
+(10, 'clument', 'mdp', 'clemof34420@gmail.com', 'cros', 'clement', 'Étudiant', 0),
+(12, 'unpseudo', '', 'mail@gmail.com', 'duvent', 'janine', 'Acheteur', 1);
 
 -- --------------------------------------------------------
 
