@@ -18,7 +18,11 @@ class Account extends CI_Controller
     }
 
     public function index(){
+        // if()
         if ($this->session->userdata('currently_logged_in')) {
+            if($this->session->userdata('username') == "admin"){
+                redirect('/administration');
+            }
             $user = $this->session->all_userdata();
             $id = $user['username'];
 
