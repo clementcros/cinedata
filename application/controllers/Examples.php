@@ -57,6 +57,28 @@ class Examples extends CI_Controller {
 		}
 	}
 
+	public function scenario_management()
+	{
+		try{
+			$crud = new grocery_CRUD();
+
+			$crud->set_theme('datatables');
+			$crud->set_table('scenarios');
+			$crud->set_subject('scenarios');
+			$crud->set_relation('id_user','signup','username');
+			$crud->columns('id','id_user','nom','description','file_url');
+			$crud->set_field_upload('file_url','assets/uploads/files');
+			
+
+			$output = $crud->render();
+
+			$this->_example_output($output);
+
+		}catch(Exception $e){
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}
+	}
+
 	public function employees_management()
 	{
 			$crud = new grocery_CRUD();

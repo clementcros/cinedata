@@ -57,5 +57,6 @@ $route['upload'] = 'Scenario';
 $route['account'] = 'Account';
 $route ['administration'] = 'Examples';
 $route ['admin'] = 'Admin';
+$route ['imdb'] = 'Imdb';
 
 

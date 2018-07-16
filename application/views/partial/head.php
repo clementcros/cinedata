@@ -74,7 +74,7 @@
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo base_url('index.php/scenario'); ?>">Scénario</a></li>
-                        <li><a href="#">ImDb</a></li>
+                        <li><a href="<?php echo base_url('index.php/imdb');?>">ImDb</a></li>
                         <li><a href="#">Droits</a></li>
                         <li><a href="#">Financement</a></li>
                     </ul>

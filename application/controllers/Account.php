@@ -14,23 +14,27 @@ class Account extends CI_Controller
     {
         parent::__construct();
         $this->load->model('User_data_model');
+        $this->load->model('Scenario_data_model');
     }
 
     public function index(){
         if ($this->session->userdata('currently_logged_in')) {
             $user = $this->session->all_userdata();
-            var_dump($user);
             $id = $user['username'];
+
             $data = $this->User_data_model->get_data($id);
-            var_dump($data);
-            echo "test";
+            $data['article'] = $this->Scenario_data_model->getData($id);
+           
+           
+
+            $data['url'] = $id;
 
             $this->load->view('partial/head');
             $this->load->view('account', $data);
             $this->load->view('partial/foot');
         }
         else {
-            //redirige a la home page en cas d'accées refuser
+            //redirige a la home page en cas d'accï¿½es refuser
             redirect('main');
         }
     }
