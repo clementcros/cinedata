@@ -9,15 +9,15 @@
 
             echo validation_errors();
 
-            echo "<p>Username:";
+            echo "<p>Nom d'utilisateur:";
             echo form_input('email');
             echo "</p>";
 
-            echo "<p>Password:";
+            echo "<p>Mot de passe:";
             echo form_password('password');
             echo "</p>";
 
-            echo "<p>Confirm Password:";
+            echo "<p>Confirmation du mot de pase:";
             echo form_password('cpassword');
             echo "</p>";
 

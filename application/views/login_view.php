@@ -15,11 +15,11 @@
 
             echo validation_errors();
 
-            echo "<p>Username: ";
+            echo "<p>Nom d'utilisateur: ";
             echo form_input('username', $this->input->post('username'));
             echo "</p>";
 
-            echo "<p>Password: ";
+            echo "<p>Mot de passe: ";
             echo form_password('password');
             echo "</p>";
 
