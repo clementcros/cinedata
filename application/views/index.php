@@ -76,7 +76,7 @@
 							<ul class="dropdown">
 								<li><a href="#">IMDB</a></li>
 								<li><a href="#">Droits</a></li>
-								<li><a href="#">Scénarios</a></li>
+								<li><a href="<?php echo base_url('index.php/scenariolist') ?>">Scénarios</a></li>
 								<li><a href="#">API</a></li>
 							</ul>
 						</li>
