@@ -26,7 +26,7 @@ class Account extends CI_Controller
             $user = $this->session->all_userdata();
             $id = $user['username'];
 
-            $data = $this->User_data_model->get_data($id);
+            $data['user'] = $this->User_data_model->get_data($id);
             $data['article'] = $this->Scenario_data_model->getData($id);
            
            

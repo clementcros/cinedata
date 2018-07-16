@@ -1,33 +1,131 @@
 <div class="container">
     <div class="col-md-12">
-        <div class="row">
-            <h1>Sign In</h1>
+<!--        <div class="row">-->
+<!--            <h1>Sign In</h1>-->
+<!---->
+<!--            --><?php
+//
+//            echo form_open('Main/signin_validation');
+//
+//            echo validation_errors();
+//
+//            echo "<p>Username:";
+//            echo form_input('email');
+//            echo "</p>";
+//
+//            echo "<p>Password:";
+//            echo form_password('password');
+//            echo "</p>";
+//
+//            echo "<p>Confirm Password:";
+//            echo form_password('cpassword');
+//            echo "</p>";
+//
+//            echo "<p>";
+//            echo form_submit('signin_submit', 'Sign In');
+//            echo "</p>";
+//            echo form_close();
+//
+//            ?>
+<!---->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<h1>reegtd</h1>-->
+<!--<form name ="user" action="--><?php //echo base_url('index.php/Main/signin_validation')?><!--" method="post">-->
+<!--    Name <input type="text" name="username"> <br/>-->
+<!--    <input type="submit" value="Submit">-->
+<!--</form>-->
 
-            <?php
+<form class="form-horizontal" action="<?php echo base_url('index.php/Main/signin_validation')?>" method="post">
+    <fieldset>
 
-            echo form_open('Main/signin_validation');
+        <!-- Form Name -->
+        <legend>Formulaire inscription</legend>
 
-            echo validation_errors();
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="gender">Genre</label>
+            <div class="col-md-4">
+                <select id="gender" name="gender" class="form-control">
+                    <option value="0">Homme</option>
+                    <option value="1">Femme</option>
+                </select>
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="username">Nom d'utilisateur</label>
+            <div class="col-md-4">
+                <input id="username" name="username" type="text" placeholder="Pseudo" class="form-control input-md" required="">
 
-            echo "<p>Username:";
-            echo form_input('email');
-            echo "</p>";
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="prenom">prenom</label>
+            <div class="col-md-4">
+                <input id="prenom" name="prenom" type="text" placeholder="prenom" class="form-control input-md" required="">
 
-            echo "<p>Password:";
-            echo form_password('password');
-            echo "</p>";
+            </div>
+        </div>
 
-            echo "<p>Confirm Password:";
-            echo form_password('cpassword');
-            echo "</p>";
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Nom</label>
+            <div class="col-md-4">
+                <input id="textinput" name="textinput" type="text" placeholder="Nom" class="form-control input-md" required="">
 
-            echo "<p>";
-            echo form_submit('signin_submit', 'Sign In');
-            echo "</p>";
-            echo form_close();
-
-            ?>
+            </div>
 
         </div>
-    </div>
-</div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="passwordinput">Mot de passe</label>
+            <div class="col-md-4">
+                <input id="passwordinput" name="passwordinput" type="password" placeholder="Mot de passe" class="form-control input-md">
+                <span class="help-block">Pour des raison de sécurité n'hésiter pas a compléxifier votre mot de passe</span>
+            </div>
+        </div>
+
+
+        <!-- Password input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="password_reapeat">Confirmer votre mot de passe</label>
+            <div class="col-md-4">
+                <input id="password_reapeat" name="password_reapeat" type="password" placeholder="mot de passe" class="form-control input-md">
+
+            </div>
+        </div>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="email">Email</label>
+                <div class="col-md-4">
+                    <input id="email" name="email" type="text" placeholder="votre mail" class="form-control input-md" required="">
+
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="status">Votre status</label>
+                <div class="col-md-4">
+                    <select id="status" name="status" class="form-control">
+                        <option value="Étudiant">Étudiant</option>
+                        <option value="Cinéaste">Cinéaste</option>
+                        <option value="Acheteur">Acheteur</option>
+                    </select>
+                </div>
+            </div>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="Submit"></label>
+            <div class="col-md-4">
+                <button id="Submit" name="Submit" class="btn btn-success">Validé</button>
+            </div>
+        </div>
+
+
+    </fieldset>
+</form>
+

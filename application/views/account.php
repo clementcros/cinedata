@@ -6,7 +6,7 @@
 
         </div>
         <div class="col-sm-6">
-        <p>email : <?php print_r( $article[0]['email']);?></p>
+        <p>email : <?php print_r( $user[0]['email']);?></p>
 
         </div>
         <div class="col-sm-6">
