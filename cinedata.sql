@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 17 juil. 2018 à 09:02
+-- Généré le :  mar. 17 juil. 2018 à 09:43
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -81,26 +81,28 @@ DROP TABLE IF EXISTS `signup`;
 CREATE TABLE IF NOT EXISTS `signup` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
-  `password` text NOT NULL,
+  `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `status` varchar(100) NOT NULL,
   `gender` tinyint(1) NOT NULL,
+  `user_activation` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `signup`
 --
 
-INSERT INTO `signup` (`id`, `username`, `password`, `email`, `nom`, `prenom`, `status`, `gender`) VALUES
-(1, 'test_1', 'test', 'test@gmail.com', 'cros', 'clement\r\n', '', 0),
-(2, 'admin', 'admin', 'cinedata@gmail.com', '', '', '', 0),
-(3, 'test', 'pass', 'pass', 'cros', 'clement', 'Étudiant', 0),
-(4, 'user', 'mdp', 'mail@gmail.com', 'cros', 'clement', 'Étudiant', 0),
-(10, 'clement', 'mdp', 'mail@viacesi.fr', 'dutrou', 'maxime', 'Cinéaste', 1),
-(12, 'unpseudo', '', 'mail@gmail.com', 'duvent', 'janine', 'Acheteur', 1);
+INSERT INTO `signup` (`id`, `username`, `password`, `email`, `nom`, `prenom`, `status`, `gender`, `user_activation`) VALUES
+(1, 'test_1', 'test', 'test@gmail.com', 'cros', 'clement\r\n', '', 0, 0),
+(2, 'admin', 'admin', 'cinedata@gmail.com', '', '', '', 0, 0),
+(3, 'test', 'pass', 'pass', 'cros', 'clement', 'Étudiant', 0, 0),
+(4, 'user', 'mdp', 'mail@gmail.com', 'cros', 'clement', 'Étudiant', 0, 0),
+(10, 'clement', 'mdp', 'mail@viacesi.fr', 'dutrou', 'maxime', 'Cinéaste', 1, 1),
+(12, 'unpseudo', '', 'mail@gmail.com', 'duvent', 'janine', 'Acheteur', 1, 0),
+(13, 'clem', 'mdp', 'clemof34420@gmail.com', 'cros', 'clement', 'Étudiant', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -114,6 +116,20 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email_user` varchar(255) NOT NULL,
   `mdp_user` text NOT NULL,
   PRIMARY KEY (`id_user`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user_status`
+--
+
+DROP TABLE IF EXISTS `user_status`;
+CREATE TABLE IF NOT EXISTS `user_status` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 COMMIT;
 

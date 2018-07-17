@@ -60,5 +60,7 @@
 <style>
     .color{
         background-color: <?php echo $color[0]['color']; ?> !important;
+        border-color : <?php echo $color[0]['color']; ?> !important;
+
     }
 </style>

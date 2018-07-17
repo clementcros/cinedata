@@ -46,7 +46,7 @@ class Examples extends CI_Controller {
 			$crud->set_theme('datatables');
 			$crud->set_table('signup');
 			$crud->set_subject('utilisateurs');
-			$crud->columns('username','password','email','status');
+			$crud->columns('username','email','status','activate');
 
 			$output = $crud->render();
 
