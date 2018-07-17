@@ -32,6 +32,10 @@ class Account extends CI_Controller
             $data['color'] = $color;
 
             $data['user'] = $this->User_data_model->get_data($id);
+            $status = $data['user'][0]['user_activation'];
+            if($status == 0){
+                redirect('Account/status');
+            }
             $data['article'] = $this->Scenario_data_model->getData($id);
            
            if($data['user'][0]['gender'] == 0){
@@ -109,6 +113,12 @@ class Account extends CI_Controller
             else{
                 redirect('Main');
             }
+        }
+
+        public function status(){
+            $this->load->view('partial/head_loggout');
+            $this->load->view('status');
+            $this->load->view('partial/foot');
         }
 
 }
