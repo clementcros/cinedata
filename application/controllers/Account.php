@@ -16,6 +16,8 @@ class Account extends CI_Controller
         $this->load->model('User_data_model');
         $this->load->model('Editioncompte_model');
         $this->load->model('Scenario_data_model');
+        $this->load->model('Param_user_model');
+        $this->load->model('Getcolor_model');
     }
 
     public function index(){
@@ -26,6 +28,8 @@ class Account extends CI_Controller
             }
             $user = $this->session->all_userdata();
             $id = $user['username'];
+            $color = $this->Getcolor_model->getcolor();
+            $data['color'] = $color;
 
             $data['user'] = $this->User_data_model->get_data($id);
             $data['article'] = $this->Scenario_data_model->getData($id);
@@ -77,5 +81,34 @@ class Account extends CI_Controller
             redirect('/Main/signin');
         }
     }
+
+    public function setting(){
+
+        if ($this->session->userdata('currently_logged_in'))
+        {
+
+            $this->load->view('partial/head');
+            $this->load->view('setting');
+            $this->load->view('partial/foot');
+
+        }
+        else{
+            redirect('Main');
+        }
+
+
+        }
+
+        public function check_param(){
+
+            if ($this->session->userdata('currently_logged_in')) {
+                $data = $this->input->post();
+                $this->Param_user_model->setparam($data);
+                redirect('Account');
+            }
+            else{
+                redirect('Main');
+            }
+        }
 
 }

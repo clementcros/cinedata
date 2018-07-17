@@ -8,18 +8,18 @@
 <div class="container">
     <div class="col-md-12">
         <div class="row">
-            <h1>Login</h1>
+            <h1>Connexion</h1>
             <?php
 
             echo form_open('Main/login_action');
 
             echo validation_errors();
 
-            echo "<p>Username: ";
+            echo "<p>Nom d'utilisateur: ";
             echo form_input('username', $this->input->post('username'));
             echo "</p>";
 
-            echo "<p>Password: ";
+            echo "<p>Mot de passe: ";
             echo form_password('password');
             echo "</p>";
 
