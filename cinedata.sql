@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 17 juil. 2018 à 09:43
+-- Généré le :  mar. 17 juil. 2018 à 13:05
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -34,14 +34,30 @@ CREATE TABLE IF NOT EXISTS `color_user` (
   `id_user` int(11) NOT NULL,
   `color` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `color_user`
 --
 
 INSERT INTO `color_user` (`id`, `id_user`, `color`) VALUES
-(1, 10, '');
+(1, 10, 'green'),
+(2, 13, 'grey');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `droit`
+--
+
+DROP TABLE IF EXISTS `droit`;
+CREATE TABLE IF NOT EXISTS `droit` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `texte` int(11) NOT NULL,
+  `link` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -74,6 +90,19 @@ INSERT INTO `scenarios` (`id`, `id_user`, `nom`, `desciption`, `file_url`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `school`
+--
+
+DROP TABLE IF EXISTS `school`;
+CREATE TABLE IF NOT EXISTS `school` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `signup`
 --
 
@@ -88,6 +117,7 @@ CREATE TABLE IF NOT EXISTS `signup` (
   `status` varchar(100) NOT NULL,
   `gender` tinyint(1) NOT NULL,
   `user_activation` tinyint(1) NOT NULL,
+  `reset_password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
@@ -95,14 +125,14 @@ CREATE TABLE IF NOT EXISTS `signup` (
 -- Déchargement des données de la table `signup`
 --
 
-INSERT INTO `signup` (`id`, `username`, `password`, `email`, `nom`, `prenom`, `status`, `gender`, `user_activation`) VALUES
-(1, 'test_1', 'test', 'test@gmail.com', 'cros', 'clement\r\n', '', 0, 0),
-(2, 'admin', 'admin', 'cinedata@gmail.com', '', '', '', 0, 0),
-(3, 'test', 'pass', 'pass', 'cros', 'clement', 'Étudiant', 0, 0),
-(4, 'user', 'mdp', 'mail@gmail.com', 'cros', 'clement', 'Étudiant', 0, 0),
-(10, 'clement', 'mdp', 'mail@viacesi.fr', 'dutrou', 'maxime', 'Cinéaste', 1, 1),
-(12, 'unpseudo', '', 'mail@gmail.com', 'duvent', 'janine', 'Acheteur', 1, 0),
-(13, 'clem', 'mdp', 'clemof34420@gmail.com', 'cros', 'clement', 'Étudiant', 0, 1);
+INSERT INTO `signup` (`id`, `username`, `password`, `email`, `nom`, `prenom`, `status`, `gender`, `user_activation`, `reset_password`) VALUES
+(1, 'test_1', 'test', 'test@gmail.com', 'cros', 'clement\r\n', '', 0, 0, ''),
+(2, 'admin', 'admin', 'cinedata@gmail.com', '', '', '', 0, 0, ''),
+(3, 'test', 'pass', 'pass', 'cros', 'clement', 'Étudiant', 0, 0, ''),
+(4, 'user', 'mdp', 'mail@gmail.com', 'cros', 'clement', 'Étudiant', 0, 0, ''),
+(10, 'clement', 'mdp', 'clemof34420@gmail.com', 'cros', 'clément', 'Acheteur', 0, 1, '6faf6f3310b1f97e01eb5fc25ebc8074e3c256485aee1a4a818b8a7fe78ed81f'),
+(12, 'unpseudo', '', 'mail@gmail.com', 'duvent', 'janine', 'Acheteur', 1, 0, ''),
+(13, 'clem', 'mdp', 'cros@gmail.com', 'cros', 'clement', 'Étudiant', 0, 1, '');
 
 -- --------------------------------------------------------
 

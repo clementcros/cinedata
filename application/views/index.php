@@ -72,7 +72,7 @@
 					<ul>
 						<li class="active"><a href="index.html">Accueil</a></li>
 						<li class="has-dropdown">
-							<a href="services.html">Services</a>
+							<a href="#">Services</a>
 							<ul class="dropdown">
 								<li><a href="#">IMDB</a></li>
 								<li><a href="#">Droits</a></li>

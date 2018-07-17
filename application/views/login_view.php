@@ -31,6 +31,8 @@
 
             ?>
             <a class="btn btn-primary" href="<?php echo base_url()."index.php/Main/signin"; ?>" role="button">Inscription</a>
+            <br>
+            <a class="btn btn-primary" href="<?php echo base_url()."index.php/Main/reset_password"; ?>" role="button">Mot de passe oublier</a>
         </div>
     </div>
 

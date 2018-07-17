@@ -1,3 +1,4 @@
+<script src="<?php echo base_url()?>/assets/js/show_more.js"></script>
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
@@ -52,10 +53,12 @@
     </div>
 </div>
 <div class="container">
+    <div class="col-md-6">
 <a class="btn btn-primary" href="<?php echo base_url('index.php/account/edit_profile'); ?>" role="button"">Modifier mon profile</a>
-    <br>
-<a class="btn btn-danger" href="<?php echo base_url('index.php/account/setting'); ?>" role="button"">Paramètre</a>
-
+    </div>
+    <div class="col-md-6">
+<a class="btn btn-danger color" href="<?php echo base_url('index.php/account/setting'); ?>" role="button"">Paramètre</a>
+    </div>
 </div>
 <style>
     .color{
