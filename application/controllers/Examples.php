@@ -56,6 +56,24 @@ class Examples extends CI_Controller {
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
 		}
 	}
+    public function droit()
+    {
+        try{
+            $crud = new grocery_CRUD();
+
+            $crud->set_theme('datatables');
+            $crud->set_table('droit');
+            $crud->set_subject('articles lié aux droits');
+            $crud->columns('id','title','texte','link');
+
+            $output = $crud->render();
+
+            $this->_example_output($output);
+
+        }catch(Exception $e){
+            show_error($e->getMessage().' --- '.$e->getTraceAsString());
+        }
+    }
 
 	public function scenario_management()
 	{

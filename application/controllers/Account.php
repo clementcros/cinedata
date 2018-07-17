@@ -17,6 +17,7 @@ class Account extends CI_Controller
         $this->load->model('Editioncompte_model');
         $this->load->model('Scenario_data_model');
         $this->load->model('Param_user_model');
+        $this->load->library('email');
         $this->load->model('Getcolor_model');
     }
 
@@ -44,6 +45,18 @@ class Account extends CI_Controller
            else {
                $data['gender'] = 'Une femme';
            }
+           // prametrer en prod les mails
+//            $this->email->from('clemof34420@gmail.com', 'CINEDATA');
+//            $this->email->to('clemof34420@gmail.com');
+//            $this->email->cc('');
+//            $this->email->bcc('');
+//
+//            $this->email->subject('Email Test');
+//            $this->email->message('Testing the email class.');
+//
+//            $this->email->send();
+//
+//            echo $this->email->print_debugger();
 
             $data['url'] = $id;
 
