@@ -17,18 +17,9 @@ foreach($css_files as $file): ?>
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="<?php echo base_url(); ?>">Accueil</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="<?php echo base_url('index.php/scenario'); ?>">Scénario</a></li>
-                    <li><a href="#">ImDb</a></li>
-                    <li><a href="#">Droits</a></li>
-                    <li><a href="#">Financement</a></li>
-                </ul>
-            </li>
             <li><a href="#">Forum</a></li>
             <li><a href="<?php echo site_url('examples/offices_management')?>">Utilisateurs</a></li>
+            <li><a href="<?php echo site_url('examples/scenario_management')?>">Gestion de scénarios</a></li>
             <li><a   href="<?php echo base_url('index.php/main/logout'); ?>">Deconnexion</a></li>
         </ul>
     </div>

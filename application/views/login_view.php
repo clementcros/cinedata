@@ -8,7 +8,7 @@
 <div class="container">
     <div class="col-md-12">
         <div class="row">
-            <h1>Login</h1>
+            <h1>Connexion</h1>
             <?php
 
             echo form_open('Main/login_action');
