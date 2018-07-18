@@ -4,7 +4,7 @@
     <title></title>
 </head>
 <body>
-Welcome <?php echo $this->session->userdata('user'); ?>
+Bienvenue <?php echo $this->session->userdata('user'); ?>
 <br>
 <?php echo anchor('Login/logout', 'Logout'); ?>
 

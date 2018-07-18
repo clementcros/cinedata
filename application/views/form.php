@@ -12,7 +12,7 @@
         <div class="control-group">
             <label class="control-label" for="mdp">Mot de passe</label>
             <div class="controls">
-                <input class="validate[required]" type="password" id="inputPassword" placeholder="Password" name="mdp">
+                <input class="validate[required]" type="password" id="inputPassword" placeholder="Mot de passe" name="mdp">
                 <?php echo form_error('mdp'); ?>
             </div>
         </div>
