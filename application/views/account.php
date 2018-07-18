@@ -10,9 +10,9 @@
 
             <ul class="list-group">
                 <li class="list-group-item active color"> Votre status : <?php echo $user[0]['status']; ?></li>
-                <li class="list-group-item">Vous êtes : <?php echo $gender; ?></li>
-                <li class="list-group-item">Votre pseudo : <?php echo $user[0]['username']; ?></li>
-                <li class="list-group-item">Votre pseudo : <?php echo $user[0]['email']; ?></li>
+                <li class="list-group-item">Sexe : <?php echo $gender; ?></li>
+                <li class="list-group-item">Pseudo : <?php echo $user[0]['username']; ?></li>
+                <li class="list-group-item">Email : <?php echo $user[0]['email']; ?></li>
             </ul>
 
         </div>
@@ -55,16 +55,15 @@
 </div>
 <div class="container">
     <div class="col-md-6">
-<a class="btn btn-primary" href="<?php echo base_url('index.php/account/edit_profile'); ?>" role="button"">Modifier mon profile</a>
+<a class="btn btn-primary" href="<?php echo base_url('index.php/account/edit_profile'); ?>" role="button"">Modifier mon profil</a>
     </div>
     <div class="col-md-6">
-<a class="btn btn-danger color" href="<?php echo base_url('index.php/account/setting'); ?>" role="button"">Paramètre</a>
+<a class="btn btn-danger color" href="<?php echo base_url('index.php/account/setting'); ?>" role="button"">Paramètres</a>
     </div>
 </div>
 <style>
     .color{
         background-color: <?php echo $color[0]['color']; ?> !important;
         border-color : <?php echo $color[0]['color']; ?> !important;
-
     }
 </style>

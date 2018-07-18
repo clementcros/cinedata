@@ -2,19 +2,19 @@
     <fieldset>
 
         <!-- Form Name -->
-        <legend>Paramètre</legend>
+        <legend>Paramètres</legend>
 
         <!-- Select Basic -->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="selectbasic">couleur générale du compte</label>
+            <label class="col-md-4 control-label" for="selectbasic">Couleur générale du compte</label>
             <div class="col-md-4">
                 <select id="selectbasic" name="color" class="form-control">
-                    <option value="blue">bleu</option>
-                    <option value="red">rouge</option>
-                    <option value="green">vert</option>
-                    <option value="darkkhaki">kaki</option>
-                    <option value="grey">gris</option>
-                    <option value="">default</option>
+                    <option value="blue">Bleu</option>
+                    <option value="red">Rouge</option>
+                    <option value="green">Vert</option>
+                    <option value="darkkhaki">Kaki</option>
+                    <option value="grey">Gris</option>
+                    <option value="">Défaut</option>
                 </select>
             </div>
         </div>
@@ -23,7 +23,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="singlebutton"></label>
             <div class="col-md-4">
-                <button id="Submit" name="Submit" class="btn btn-success">Validé</button>
+                <button id="Submit" name="Submit" class="btn btn-success">Valider</button>
             </div>
         </div>
 
