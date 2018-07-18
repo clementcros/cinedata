@@ -51,6 +51,26 @@ class Scenario extends CI_Controller
         $this->_example_output($output);
     }
 
+    function metrage() {
+
+        $crud = new grocery_CRUD();
+
+        $crud->where('username',$_SESSION['username']);
+
+        $crud->set_theme('datatables');
+        $crud->set_table('scenarios');
+        $crud->set_subject('scenarios');
+        $crud->set_relation('id_user','signup','username');
+        $crud->columns('id','id_user','nom','description','file_url', 'image');
+        $crud->set_field_upload('file_url','assets/uploads/files');
+        $crud->set_field_upload('image','assets/uploads/files');
+
+
+        $output = $crud->render();
+
+        $this->_example_output($output);
+    }
+
 
     public function index()
     {
