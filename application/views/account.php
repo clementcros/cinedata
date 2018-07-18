@@ -46,7 +46,7 @@
             <ul class="list-group">
                 <li class="list-group-item active text-center color"> Mettre en ligne un nouveau scénario</li>
                 <li class="list-group-item text-center"><a class="btn btn-primary"
-                                                           href="<?php echo base_url('index.php/scenario'); ?>"
+                                                           href="<?php echo base_url('index.php/scenario/example_with_or_where'); ?>"
                                                            role="button"">Mettre en ligne</a></li>
             </ul>
         </div>

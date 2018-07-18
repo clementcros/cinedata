@@ -31,7 +31,14 @@
 					<?php echo $input_fields[$field->field_name]->display_as?><?php echo ($input_fields[$field->field_name]->required)? "<span class='required'>*</span> " : ""?> :
 				</div>
 				<div class='form-input-box' id="<?php echo $field->field_name; ?>_input_box">
-					<?php echo $input_fields[$field->field_name]->input?>
+
+					<?php
+//                    if($_SESSION['username'] != null || $_SESSION['username'] != 'admin'){
+//
+//                    }
+//                    var_dump($input_fields[$field->field_name]);
+                    echo $input_fields[$field->field_name]->input
+                    ?>
 				</div>
 				<div class='clear'></div>
 			</div>
