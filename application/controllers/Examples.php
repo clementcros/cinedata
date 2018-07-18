@@ -84,9 +84,10 @@ class Examples extends CI_Controller {
 			$crud->set_table('scenarios');
 			$crud->set_subject('scenarios');
 			$crud->set_relation('id_user','signup','username');
-			$crud->columns('id','id_user','nom','description','file_url');
+			$crud->columns('id','id_user','nom','description','file_url','image');
 			$crud->set_field_upload('file_url','assets/uploads/files');
-			
+			$crud->set_field_upload('image','assets/uploads/files');
+
 
 			$output = $crud->render();
 
@@ -96,6 +97,25 @@ class Examples extends CI_Controller {
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
 		}
 	}
+
+    function example_with_or_where() {
+
+        $crud = new grocery_CRUD();
+
+        $crud->where('username',$_SESSION['username']);
+
+        $crud->set_theme('datatables');
+        $crud->set_table('scenarios');
+        $crud->set_subject('scenarios');
+        $crud->set_relation('id_user','signup','username');
+        $crud->columns('id','id_user','nom','description','file_url');
+        $crud->set_field_upload('file_url','assets/uploads/files');
+
+
+        $output = $crud->render();
+
+        $this->_example_output($output);
+    }
 
 	public function employees_management()
 	{

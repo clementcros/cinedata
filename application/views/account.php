@@ -10,9 +10,9 @@
 
             <ul class="list-group">
                 <li class="list-group-item active color"> Votre status : <?php echo $user[0]['status']; ?></li>
-                <li class="list-group-item">Vous êtes : <?php echo $gender; ?></li>
-                <li class="list-group-item">Votre pseudo : <?php echo $user[0]['username']; ?></li>
-                <li class="list-group-item">Votre pseudo : <?php echo $user[0]['email']; ?></li>
+                <li class="list-group-item">Sexe : <?php echo $gender; ?></li>
+                <li class="list-group-item">Pseudo : <?php echo $user[0]['username']; ?></li>
+                <li class="list-group-item">Email : <?php echo $user[0]['email']; ?></li>
             </ul>
 
         </div>
@@ -25,7 +25,7 @@
         <?php foreach ($article as $article_item): ?>
             <div class="col-md-6">
                 <div class="col-xs-12"><h4>Auteur :<?php print_r($article_item['nom']); ?></h4></div>
-
+                <img src="<?php echo base_url() . '/assets/uploads/files/' . $article_item['image']; ?>" class="img-responsive" alt="Cinque Terre">
 
                 <div class="col-xs-12"><p><?php print_r($article_item['desciption']); ?></p></div>
                 <div class="row">
@@ -46,7 +46,7 @@
             <ul class="list-group">
                 <li class="list-group-item active text-center color"> Mettre en ligne un nouveau scénario</li>
                 <li class="list-group-item text-center"><a class="btn btn-primary"
-                                                           href="<?php echo base_url('index.php/scenario'); ?>"
+                                                           href="<?php echo base_url('index.php/scenario/example_with_or_where'); ?>"
                                                            role="button"">Mettre en ligne</a></li>
             </ul>
         </div>
@@ -54,16 +54,15 @@
 </div>
 <div class="container">
     <div class="col-md-6">
-<a class="btn btn-primary" href="<?php echo base_url('index.php/account/edit_profile'); ?>" role="button"">Modifier mon profile</a>
+<a class="btn btn-primary" href="<?php echo base_url('index.php/account/edit_profile'); ?>" role="button"">Modifier mon profil</a>
     </div>
     <div class="col-md-6">
-<a class="btn btn-danger color" href="<?php echo base_url('index.php/account/setting'); ?>" role="button"">Paramètre</a>
+<a class="btn btn-danger color" href="<?php echo base_url('index.php/account/setting'); ?>" role="button"">Paramètres</a>
     </div>
 </div>
 <style>
     .color{
         background-color: <?php echo $color[0]['color']; ?> !important;
         border-color : <?php echo $color[0]['color']; ?> !important;
-
     }
 </style>

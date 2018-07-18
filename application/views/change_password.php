@@ -10,7 +10,7 @@
             <input type="hidden" id="username" name="custId" value="<?php echo $username;   ?>">
             <label class="col-md-4 control-label" for="passwordinput">Mot de passe</label>
             <div class="col-md-4">
-                <input id="passwordinput" name="passwordinput" type="password" placeholder="" class="form-control input-md">
+                <input id="passwordinput" name="passwordinput" type="password" placeholder="Nouveau mot de passe" class="form-control input-md">
 
             </div>
         </div>
@@ -19,7 +19,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="password_reapeat">Confirmer votre mot de passe</label>
             <div class="col-md-4">
-                <input id="password_reapeat" name="password_reapeat" type="password" placeholder="" class="form-control input-md">
+                <input id="password_reapeat" name="password_reapeat" type="password" placeholder="Confirmation" class="form-control input-md">
 
             </div>
         </div>

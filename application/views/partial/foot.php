@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row row-pb-md">
             <div class="col-md-4 fh5co-widget ">
-                <h3>Cinedata.</h3>
-                <p>Révolutionnons le monde du cinéma et facilitons sons accés</p>
+                <h3>Cinedata</h3>
+                <p>Révolutionnons le monde du cinéma et facilitons son accès</p>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1 ">
                 <ul class="fh5co-footer-links">
@@ -39,7 +39,7 @@
         <div class="row copyright">
             <div class="col-md-12 text-center">
                 <p>
-                    <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
+                    <small class="block">&copy; 2018 Free HTML5. All Rights Reserved.</small>
                     <small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://pixeden.com/" target="_blank">Pixeden</a> &amp; <a href="http://unsplash.com/" target="_blank">Unsplash</a></small>
                 </p>
                 <p>
@@ -52,7 +52,6 @@
                 </p>
             </div>
         </div>
-
     </div>
 </footer>
 </div>

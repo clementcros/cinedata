@@ -1881,7 +1881,6 @@ class grocery_CRUD_Layout extends grocery_CRUD_Model_Driver
 
 		$data 				= $this->get_common_data();
 		$data->types 		= $this->get_field_types();
-
 		$data->list_url 		= $this->getListUrl();
 		$data->insert_url		= $this->getInsertUrl();
 		$data->validation_url	= $this->getValidationInsertUrl();
@@ -2596,13 +2595,29 @@ class grocery_CRUD_Layout extends grocery_CRUD_Model_Driver
 		$input = "<select id='field-{$field_info->name}'  name='{$field_info->name}' class='$ajax_or_not_class' data-placeholder='$select_title' style='width:300px'>";
 		$input .= "<option value=''></option>";
 
+
 		if(!$using_ajax)
 		{
 			$options_array = $this->get_relation_array($field_info->extras);
 			foreach($options_array as $option_value => $option)
 			{
-				$selected = !empty($value) && $value == $option_value ? "selected='selected'" : '';
-				$input .= "<option value='$option_value' $selected >$option</option>";
+			    if($_SESSION['username'] != null){
+			        if ( $_SESSION['username'] == 'admin'){
+                        $selected = !empty($value) && $value == $option_value ? "selected='selected'" : '';
+                        $input .= "<option value='$option_value' $selected >$option</option>";
+                    }
+			        else {
+//                        $option = $_SESSION['username'];
+                        $selected = !empty($value) && $value == $option_value ? "selected='selected'" : '';
+                        if($option == $_SESSION['username'])
+                        $input .= "<option value='$option_value' $selected >$option</option>";
+                    }
+//                    else {
+//                        $selected = !empty($value) && $value == $option_value ? "selected='selected'" : '';
+//                        $input .= "<option value='$option_value' $selected >$option</option>";
+//                    }
+                }
+
 			}
 		}
 		elseif(!empty($value) || (is_numeric($value) && $value == '0') ) //If it's ajax then we only need the selected items and not all the items
