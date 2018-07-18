@@ -5,7 +5,16 @@
 
          <div class="card col-md-6">
              <div class="col-lg-6">
-                 <img class="card-img-top" src="<?php echo base_url() . '/assets/uploads/files/' . $article_item['image']; ?>" alt="Card image cap">
+                 <img class="card-img-top" src="<?php
+                 if ($article_item['image'] != null){
+
+                     echo base_url() . '/assets/uploads/files/' . $article_item['image'];
+                 }
+                 else {
+                     echo base_url() . '/images/clap-1.png';
+                 }
+
+                 ?>" alt="Card image cap">
              </div>
              <div class="card" style="width: 50rem;">
                  <div class="card-body text-center">
