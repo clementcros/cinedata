@@ -1,20 +1,21 @@
-<br>
 <div class="container">
 
-<div class="row">
-
  <?php  foreach ($article as $article_item): ?>
-<div class="col-sm-6 col-md-4 col-lg-3 mt-4">
-                <div class="card">
-                    <h3 class="card-img-top"><?php print_r( $article_item['nom']);?> </h3>
-                    <p class="card-block">
-                    <?php print_r( $article_item['desciption']);?>
-                    </p>
-                    <a class="btn btn-primary" href="<?php echo base_url().'assets/uploads/files/'.$article_item['file_url'];?>" role="button" download="scenario_<?php echo $article_item['nom'];?>">Télécharger</a>
-                </div>
-            </div>
-            <?php endforeach; ?>
+    <div class="row">
 
+         <div class="card col-md-6">
+             <div class="col-lg-6">
+                 <img class="card-img-top" src="<?php echo base_url() . '/assets/uploads/files/' . $article_item['image']; ?>" alt="Card image cap">
+             </div>
+             <div class="card" style="width: 50rem;">
+                 <div class="card-body text-center">
+                     <h2 class="card-title"><a><?php print_r( $article_item['nom']);?></a></h2>
+                     <p class="card-text"><?php print_r( $article_item['desciption']);?></p>
+                     <a href="<?php echo base_url().'assets/uploads/files/'.$article_item['file_url'];?>" class="btn btn-primary";">Télécharger </a>
+                 </div>
+             </div>
+         </div>
+    <?php endforeach; ?>
     </div>
 </div>
 
@@ -23,5 +24,9 @@
         text-align: center;
         width:250px;
         height:250px;
+    }
+    .card.col-md-6 {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
 </style>

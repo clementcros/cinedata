@@ -27,7 +27,6 @@
                 <div class="col-xs-12"><h4>Auteur :<?php print_r($article_item['nom']); ?></h4></div>
                 <img src="<?php echo base_url() . '/assets/uploads/files/' . $article_item['image']; ?>" class="img-responsive" alt="Cinque Terre">
 
-
                 <div class="col-xs-12"><p><?php print_r($article_item['desciption']); ?></p></div>
                 <div class="row">
                     <div class="col-xs-12"><a class="btn btn-primary"
