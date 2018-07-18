@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['form'] = 'Main';
 $route['upload'] = 'Scenario';
 $route['account'] = 'Account';
+$route['user_status'] = 'Api';
 $route['scenariolist'] = 'Scenariolist';
 $route ['administration'] = 'Examples';
 $route ['admin'] = 'Admin';
