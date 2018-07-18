@@ -43,7 +43,7 @@
 <div class="container">
     <div class="row">
 
-        <h2>Mes Scénarios</h2>
+        <h2>Mes Métrages</h2>
         <?php foreach ($metrage as $article_item): ?>
             <div class="col-md-6">
                 <div class="col-xs-12"><h4>Auteur :<?php print_r($article_item['nom']); ?></h4></div>
