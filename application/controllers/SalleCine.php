@@ -35,7 +35,6 @@ class SalleCine extends CI_Controller
             $data['user'][0]['status'] = 'none';
         }
         $data['metrages'] = $this->Metrages_model->getmetrages();
-        var_dump($data);
 
         if($this->session->userdata('currently_logged_in')) {
             $this->load->view('partial/head');

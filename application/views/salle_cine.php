@@ -21,14 +21,11 @@
                     <h2 class="card-title"><a><?php print_r( $metrages['nom']);?></a></h2>
                     <p class="card-text"><?php print_r( $metrages['desciption']);?></p>
                     <?php
-                    if ($user[0]['status'] == 'Acheteur' || $user[0]['username'] == 'admin' )
-                    {
 
-                        echo  "<a href=".base_url().'assets/uploads/files/'.$metrages['file_url']." class='btn btn-primary'>Voir </a>";
-                    }
-                    else{
-                        echo "<h4>Pour télécharger le scénario vous devez être un Acheteur</h4>";
-                    }
+
+                          echo "<a href=".base_url().'assets/uploads/files/'.$metrages['file_url']." class='btn btn-primary'>Voir </a>";
+
+
 //
 //                    ?>
                 </div>
