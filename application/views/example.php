@@ -20,6 +20,7 @@ foreach($css_files as $file): ?>
             <li><a href="#">Forum</a></li>
             <li><a href="<?php echo site_url('examples/offices_management')?>">Utilisateurs</a></li>
             <li><a href="<?php echo site_url('examples/scenario_management')?>">Gestion de scénarios</a></li>
+            <li><a href="<?php echo site_url('examples/contact')?>">Messages contacts</a></li>
             <li><a   href="<?php echo base_url('index.php/main/logout'); ?>">Déconnexion</a></li>
         </ul>
     </div>

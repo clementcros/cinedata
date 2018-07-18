@@ -97,6 +97,25 @@ class Examples extends CI_Controller {
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
 		}
 	}
+    public function contact()
+    {
+        try{
+            $crud = new grocery_CRUD();
+
+            $crud->set_theme('datatables');
+            $crud->set_table('contact');
+            $crud->set_subject('contact');
+            $crud->columns('id','nom','email','sujet','message');
+
+
+            $output = $crud->render();
+
+            $this->_example_output($output);
+
+        }catch(Exception $e){
+            show_error($e->getMessage().' --- '.$e->getTraceAsString());
+        }
+    }
 
     function example_with_or_where() {
 
