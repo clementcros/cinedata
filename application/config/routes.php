@@ -60,5 +60,5 @@ $route['scenariolist'] = 'Scenariolist';
 $route ['administration'] = 'Examples';
 $route ['admin'] = 'Admin';
 $route ['imdb'] = 'Imdb';
-
+$route['contact'] = 'Contact';
 

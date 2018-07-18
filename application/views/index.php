@@ -85,7 +85,7 @@
 <!--						<li><a href="about.html"></a></li>-->
 						<li><a href="blog.html">forum</a></li>
 						<li><a href="<?php echo base_url('index.php/account'); ?>">Mon compte</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="<?php echo base_url('index.php/contact'); ?>">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -363,7 +363,7 @@
 					<ul class="fh5co-footer-links">
 						<li><a href="#">About</a></li>
 						<li><a href="#">Help</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="<?php echo base_url('index.php/contact'); ?>">Contact</a></li>
 						<li><a href="#">Terms</a></li>
 						<li><a href="#">Meetups</a></li>
 					</ul>

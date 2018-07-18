@@ -84,7 +84,7 @@
 <!--						<li><a href="about.html"></a></li>-->
 						<li><a href="blog.html">forum</a></li>
 						<li><a href="<?php echo base_url('index.php/account'); ?>">Mon compte</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="<?php echo base_url('index.php/contact'); ?>">Contact</a></li>
 					</ul>
 				</div>
 			</div>
