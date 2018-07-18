@@ -20,7 +20,17 @@
                  <div class="card-body text-center">
                      <h2 class="card-title"><a><?php print_r( $article_item['nom']);?></a></h2>
                      <p class="card-text"><?php print_r( $article_item['desciption']);?></p>
-                     <a href="<?php echo base_url().'assets/uploads/files/'.$article_item['file_url'];?>" class="btn btn-primary";">Télécharger </a>
+                     <?php
+                     if ($user[0]['status'] == 'Acheteur' || $user[0]['username'] == 'admin' )
+                     {
+
+                       echo  "<a href=".base_url().'assets/uploads/files/'.$article_item['file_url']." class='btn btn-primary'>Télécharger </a>";
+                     }
+                     else{
+                         echo "<h4>Pour télécharger le scénario vous devez être un Acheteur</h4>";
+                     }
+
+?>
                  </div>
              </div>
          </div>
