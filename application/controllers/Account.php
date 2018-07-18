@@ -16,6 +16,7 @@ class Account extends CI_Controller
         $this->load->model('User_data_model');
         $this->load->model('Editioncompte_model');
         $this->load->model('Scenario_data_model');
+        $this->load->model('Metrages_data_model');
         $this->load->model('Param_user_model');
         $this->load->library('email');
         $this->load->model('Getcolor_model');
@@ -38,7 +39,8 @@ class Account extends CI_Controller
                 redirect('Account/status');
             }
             $data['article'] = $this->Scenario_data_model->getData($id);
-           
+            $data['metrage'] = $this->Metrages_data_model->getmetrages($id);
+
            if($data['user'][0]['gender'] == 0){
                $data['gender'] = 'Un homme';
            }
