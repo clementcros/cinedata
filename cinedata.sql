@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le :  mer. 18 juil. 2018 à 16:17
--- Version du serveur :  10.1.34-MariaDB
--- Version de PHP :  7.2.7
+-- Hôte : 127.0.0.1:3306
+-- Généré le :  mer. 18 juil. 2018 à 14:26
+-- Version du serveur :  5.7.19
+-- Version de PHP :  5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -28,11 +28,13 @@ SET time_zone = "+00:00";
 -- Structure de la table `color_user`
 --
 
-CREATE TABLE `color_user` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `color_user`;
+CREATE TABLE IF NOT EXISTS `color_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
-  `color` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `color` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `color_user`
@@ -48,20 +50,38 @@ INSERT INTO `color_user` (`id`, `id_user`, `color`) VALUES
 -- Structure de la table `contact`
 --
 
-CREATE TABLE `contact` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `contact`;
+CREATE TABLE IF NOT EXISTS `contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
-  `email` varchar(150) NOT NULL,
-  `sujet` varchar(150) NOT NULL,
-  `message` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `email` varchar(255) NOT NULL,
+  `sujet` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `contact`
 --
 
 INSERT INTO `contact` (`id`, `nom`, `email`, `sujet`, `message`) VALUES
-(1, 'test', 'test@gmail.com', 'option1', 'mon message');
+(1, 'clement', 'clemof34420@gmail.com', 'option2', 'test');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `contacts`
+--
+
+DROP TABLE IF EXISTS `contacts`;
+CREATE TABLE IF NOT EXISTS `contacts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `sujet` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -69,11 +89,13 @@ INSERT INTO `contact` (`id`, `nom`, `email`, `sujet`, `message`) VALUES
 -- Structure de la table `droit`
 --
 
-CREATE TABLE `droit` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `droit`;
+CREATE TABLE IF NOT EXISTS `droit` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `texte` int(11) NOT NULL,
-  `link` int(11) NOT NULL
+  `link` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -82,21 +104,24 @@ CREATE TABLE `droit` (
 -- Structure de la table `metrages`
 --
 
-CREATE TABLE `metrages` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `metrages`;
+CREATE TABLE IF NOT EXISTS `metrages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `desciption` text NOT NULL,
   `file_url` varchar(255) NOT NULL,
-  `image` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `image` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_user` (`id_user`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `metrages`
 --
 
 INSERT INTO `metrages` (`id`, `id_user`, `nom`, `desciption`, `file_url`, `image`) VALUES
-(1, 10, 'le court métrage', '<p>\r\n	<span style=\"color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">our r&eacute;aliser un livre sp&eacute;cimen de polices de texte. Il n&#39;a pas fait que survivre cinq si&egrave;cles, mais s&#39;est aussi adapt&eacute; &agrave; la bureautique informatique, sans que son contenu n&#39;en soit modifi&eacute;. Il a &eacute;t&eacute; popularis&eacute; dans les ann&eacute;es 1960 gr&acirc;ce &agrave; la vente de feuilles Letraset contenant des passages du&nbsp;</span></p>\r\n', 'a0d97-videoplayback.mp4', 'e6440-6sejoursjpg.jpg');
+(1, 10, 'le court métrage', '<p>\r\n	<span font-size:=\"\" open=\"\" style=\"color: rgb(0, 0, 0); font-family: \" text-align:=\"\">our r&eacute;aliser un livre sp&eacute;cimen de polices de texte. Il n&#39;a pas fait que survivre cinq si&egrave;cles, mais s&#39;est aussi adapt&eacute; &agrave; la bureautique informatique, sans que son contenu n&#39;en soit modifi&eacute;. Il a &eacute;t&eacute; popularis&eacute; dans les ann&eacute;es 1960 gr&acirc;ce &agrave; la vente de feuilles Letraset contenant des passages du&nbsp;</span></p>\r\n', 'a0d97-videoplayback.mp4', '14956-film-1155439_960_720.jpg');
 
 -- --------------------------------------------------------
 
@@ -104,14 +129,17 @@ INSERT INTO `metrages` (`id`, `id_user`, `nom`, `desciption`, `file_url`, `image
 -- Structure de la table `scenarios`
 --
 
-CREATE TABLE `scenarios` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `scenarios`;
+CREATE TABLE IF NOT EXISTS `scenarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `desciption` text NOT NULL,
   `file_url` varchar(255) NOT NULL,
-  `image` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `image` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_user` (`id_user`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `scenarios`
@@ -131,9 +159,11 @@ INSERT INTO `scenarios` (`id`, `id_user`, `nom`, `desciption`, `file_url`, `imag
 -- Structure de la table `school`
 --
 
-CREATE TABLE `school` (
-  `id` int(11) NOT NULL,
-  `nom` varchar(255) NOT NULL
+DROP TABLE IF EXISTS `school`;
+CREATE TABLE IF NOT EXISTS `school` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -142,8 +172,9 @@ CREATE TABLE `school` (
 -- Structure de la table `signup`
 --
 
-CREATE TABLE `signup` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `signup`;
+CREATE TABLE IF NOT EXISTS `signup` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -152,8 +183,9 @@ CREATE TABLE `signup` (
   `status` varchar(100) NOT NULL,
   `gender` tinyint(1) NOT NULL,
   `user_activation` tinyint(1) NOT NULL,
-  `reset_password` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `reset_password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `signup`
@@ -174,10 +206,12 @@ INSERT INTO `signup` (`id`, `username`, `password`, `email`, `nom`, `prenom`, `s
 -- Structure de la table `user`
 --
 
-CREATE TABLE `user` (
-  `id_user` int(11) NOT NULL,
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `id_user` int(11) NOT NULL AUTO_INCREMENT,
   `email_user` varchar(255) NOT NULL,
-  `mdp_user` text NOT NULL
+  `mdp_user` text NOT NULL,
+  PRIMARY KEY (`id_user`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -186,129 +220,13 @@ CREATE TABLE `user` (
 -- Structure de la table `user_status`
 --
 
-CREATE TABLE `user_status` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `user_status`;
+CREATE TABLE IF NOT EXISTS `user_status` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
-  `status` tinyint(1) NOT NULL
+  `status` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `color_user`
---
-ALTER TABLE `color_user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `contact`
---
-ALTER TABLE `contact`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `droit`
---
-ALTER TABLE `droit`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `metrages`
---
-ALTER TABLE `metrages`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`id_user`);
-
---
--- Index pour la table `scenarios`
---
-ALTER TABLE `scenarios`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`id_user`);
-
---
--- Index pour la table `school`
---
-ALTER TABLE `school`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `signup`
---
-ALTER TABLE `signup`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
-
---
--- Index pour la table `user_status`
---
-ALTER TABLE `user_status`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `color_user`
---
-ALTER TABLE `color_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT pour la table `contact`
---
-ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `droit`
---
-ALTER TABLE `droit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `metrages`
---
-ALTER TABLE `metrages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `scenarios`
---
-ALTER TABLE `scenarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT pour la table `school`
---
-ALTER TABLE `school`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `signup`
---
-ALTER TABLE `signup`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT pour la table `user`
---
-ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `user_status`
---
-ALTER TABLE `user_status`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
