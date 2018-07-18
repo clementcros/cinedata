@@ -81,7 +81,7 @@
                 </li>
                 <li><a href="#">Forum</a></li>
                 <li><a href="<?php echo base_url('index.php/account'); ?>">Mon compte</a></li>
-                <li><a   href="<?php echo base_url('index.php/main/logout'); ?>">Deconnexion</a></li>
+                <li><a   href="<?php echo base_url('index.php/main/logout'); ?>">Déconnexion</a></li>
             </ul>
         </div>
     </nav>

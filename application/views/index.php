@@ -66,7 +66,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<div id="fh5co-logo"><a href="index.html">Ciné data<span>.</span></a></div>
+					<div id="fh5co-logo"><a href="index.html">Cinédata<span>.</span></a></div>
 				</div>
 				<div class="col-xs-12 text-center menu-1">
 					<ul>
@@ -83,7 +83,7 @@
 
 <!--						<li><a href="work.html">Work</a></li>-->
 <!--						<li><a href="about.html"></a></li>-->
-						<li><a href="blog.html">forum</a></li>
+						<li><a href="blog.html">Forum</a></li>
 						<li><a href="<?php echo base_url('index.php/account'); ?>">Mon compte</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
@@ -100,7 +100,7 @@
 				<div class="col-md-12 col-md-offset-0 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeInUp">
-							<h1 class="mb30">Simplifiez vous le métier de cinéaste.</h1>
+							<h1 class="mb30">Simplifiez-vous le métier de cinéaste</h1>
 							<p>
 								<a href="<?php echo base_url('index.php/main/signin'); ?>" target="_blank" class="btn btn-primary">Inscription</a> ou
 								<a href='<?php echo base_url('index.php/main'); ?>' >Connexion</a>
@@ -119,9 +119,9 @@
 			<div class="row row-pb-md">
 				<div class="col-md-8 col-md-offset-2 text-center animate-box" data-animate-effect="fadeInUp">
 					<div class="fh5co-heading">
-						<h2>Tout le monde y a accès</h2>
+						<h2>Accès universel</h2>
                         <span>Professionnel, étudiant ou professeur ? </span>
-                        <p>CINÉDATA regroupe la plupart des services liés au monde vidéaste afin de vous accompagner tout au long de votre parcours. </p>
+                        <p>CINÉDATA regroupe la plupart des services liés au monde vidéaste afin de vous accompagner tout au long de votre parcours</p>
 					</div>
 				</div>
 			</div>
@@ -132,7 +132,7 @@
 							<i class="icon-graduation-cap"></i>
 						</span>
 						<h3>Étudiant</h3>
-						<p>Nous vous aidons dans vos démarches de projet grâce aux différentes aides qui sont mise à disposition.</p>
+						<p>Nous vous aidons dans vos démarches de projet grâce aux différentes aides qui sont mises à disposition</p>
 						<p><a href="#">voir plus</a></p>
 					</div>
 				</div>
@@ -142,7 +142,7 @@
 							<i class="icon-video"></i>
 						</span>
 						<h3>Professionnel</h3>
-						<p>Retrouvez les différents festivals du cinéma faciles d'accès depuis un espace perso. Nous soumettons votre création aux différents acheteurs et vous accompagnons dans vos projets</p>
+						<p>Retrouvez les différents festivals du cinéma faciles d'accès depuis un espace personnalisé. Nous soumettons votre création aux différents acheteurs et vous accompagnons dans vos projets</p>
 						<p><a href="#">voir plus</a></p>
 					</div>
 				</div>
@@ -152,7 +152,7 @@
 							<i class="icon-user"></i>
 						</span>
 						<h3>Professeur</h3>
-						<p>Rejoignez notre communauté pour former au mieux les nouveaux talents de demain grâce à notre forum dédié.</p>
+						<p>Rejoignez notre communauté pour former au mieux les nouveaux talents de demain grâce à notre forum dédié</p>
 						<p><a href="#">voir plus</a></p>
 					</div>
 				</div>
@@ -168,7 +168,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading  animate-box">
 <!--					<span>Want Some Cool Stuff</span>-->
 					<h2>Projets Récents</h2>
-					<p>Les derniers projets mis en avant.</p>
+					<p>Les derniers projets mis en avant</p>
 				</div>
 			</div>
 

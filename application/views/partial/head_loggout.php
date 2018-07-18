@@ -65,7 +65,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 text-center">
-					<div id="fh5co-logo"><a href="<?php echo base_url(); ?>">Ciné data<span>.</span></a></div>
+					<div id="fh5co-logo"><a href="<?php echo base_url(); ?>">Cinédata<span>.</span></a></div>
 				</div>
 				<div class="col-xs-12 text-center menu-1">
 					<ul>
@@ -82,7 +82,7 @@
 
 <!--						<li><a href="work.html">Work</a></li>-->
 <!--						<li><a href="about.html"></a></li>-->
-						<li><a href="blog.html">forum</a></li>
+						<li><a href="blog.html">Forum</a></li>
 						<li><a href="<?php echo base_url('index.php/account'); ?>">Mon compte</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>

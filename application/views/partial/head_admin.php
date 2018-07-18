@@ -65,7 +65,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Cinédata</a>
+                <a class="navbar-brand" href="#">CinÃ©data</a>
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="<?php echo base_url(); ?>">Accueil</a></li>
@@ -73,7 +73,7 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo base_url('index.php/scenario'); ?>">Scénario</a></li>
+                        <li><a href="<?php echo base_url('index.php/scenario'); ?>">ScÃ©nario</a></li>
                         <li><a href="#">ImDb</a></li>
                         <li><a href="#">Droits</a></li>
                         <li><a href="#">Financement</a></li>
@@ -81,7 +81,7 @@
                 </li>
                 <li><a href="#">Forum</a></li>
                 <li><a href="<?php echo base_url('index.php/account'); ?>">Mon compte</a></li>
-                <li><a   href="<?php echo base_url('index.php/main/logout'); ?>">Deconnexion</a></li>
+                <li><a   href="<?php echo base_url('index.php/main/logout'); ?>">DÃ©connexion</a></li>
             </ul>
         </div>
     </nav>
