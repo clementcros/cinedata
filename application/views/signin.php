@@ -1,51 +1,14 @@
 <div class="container">
     <div class="col-md-12">
-<!--        <div class="row">-->
-<!--            <h1>Sign In</h1>-->
-<!---->
-<!--            --><?php
-//
-//            echo form_open('Main/signin_validation');
-//
-//            echo validation_errors();
-//
-//            echo "<p>Username:";
-//            echo form_input('email');
-//            echo "</p>";
-//
-//            echo "<p>Password:";
-//            echo form_password('password');
-//            echo "</p>";
-//
-//            echo "<p>Confirm Password:";
-//            echo form_password('cpassword');
-//            echo "</p>";
-//
-//            echo "<p>";
-//            echo form_submit('signin_submit', 'Sign In');
-//            echo "</p>";
-//            echo form_close();
-//
-//            ?>
-<!---->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--<h1>reegtd</h1>-->
-<!--<form name ="user" action="--><?php //echo base_url('index.php/Main/signin_validation')?><!--" method="post">-->
-<!--    Name <input type="text" name="username"> <br/>-->
-<!--    <input type="submit" value="Submit">-->
-<!--</form>-->
-
 <form class="form-horizontal" action="<?php echo base_url('index.php/Main/signin_validation')?>" method="post">
     <fieldset>
 
         <!-- Form Name -->
-        <legend>Formulaire inscription</legend>
+        <legend>Inscription</legend>
 
         <!-- Select Basic -->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="gender">Genre</label>
+            <label class="col-md-4 control-label" for="gender">Sexe</label>
             <div class="col-md-4">
                 <select id="gender" name="gender" class="form-control">
                     <option value="0">Homme</option>
@@ -55,7 +18,7 @@
         </div>
         <!-- Text input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="username">Nom d'utilisateur</label>
+            <label class="col-md-4 control-label" for="username">Pseudo</label>
             <div class="col-md-4">
                 <input id="username" name="username" type="text" placeholder="Pseudo" class="form-control input-md" required="">
 
@@ -63,9 +26,9 @@
         </div>
         <!-- Text input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="prenom">prenom</label>
+            <label class="col-md-4 control-label" for="prenom">Prénom</label>
             <div class="col-md-4">
-                <input id="prenom" name="prenom" type="text" placeholder="prenom" class="form-control input-md" required="">
+                <input id="prenom" name="prenom" type="text" placeholder="Prénom" class="form-control input-md" required="">
 
             </div>
         </div>
@@ -83,16 +46,16 @@
             <label class="col-md-4 control-label" for="passwordinput">Mot de passe</label>
             <div class="col-md-4">
                 <input id="passwordinput" name="passwordinput" type="password" placeholder="Mot de passe" class="form-control input-md">
-                <span class="help-block">Pour des raison de sécurité n'hésiter pas a compléxifier votre mot de passe</span>
+                <span class="help-block">Pour des raisons de sécurité n'hésitez pas à complexifier votre mot de passe</span>
             </div>
         </div>
 
 
         <!-- Password input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="password_reapeat">Confirmer votre mot de passe</label>
+            <label class="col-md-4 control-label" for="password_reapeat">Confirmation mot de passe</label>
             <div class="col-md-4">
-                <input id="password_reapeat" name="password_reapeat" type="password" placeholder="mot de passe" class="form-control input-md">
+                <input id="password_reapeat" name="password_reapeat" type="password" placeholder="Confirmation" class="form-control input-md">
 
             </div>
         </div>
@@ -100,14 +63,14 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="email">Email</label>
                 <div class="col-md-4">
-                    <input id="email" name="email" type="text" placeholder="votre mail" class="form-control input-md" required="">
+                    <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md" required="">
 
                 </div>
             </div>
 
             <!-- Select Basic -->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="status">Votre status</label>
+                <label class="col-md-4 control-label" for="status">Statut</label>
                 <div class="col-md-4">
                     <select id="status" name="status" class="form-control">
                         <option value="Étudiant">Étudiant</option>
@@ -121,7 +84,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="Submit"></label>
             <div class="col-md-4">
-                <button id="Submit" name="Submit" class="btn btn-success">Validé</button>
+                <button id="Submit" name="Submit" class="btn btn-success">Valider</button>
             </div>
         </div>
 

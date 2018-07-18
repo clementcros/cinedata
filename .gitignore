@@ -1,2 +1,29 @@
+<<<<<<< HEAD
 application/config/config.php
 application/config/database.php
+=======
+<<<<<<< HEAD
+/nbproject/private/
+/application/config/*
+=======
+/.web-server-pid
+/app/config/parameters.yml
+/build/
+/phpunit.xml
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/vendor/
+/web/bundles/
+/application/config/config.php
+/application/config/database.php
+>>>>>>> bf0738457e1e30b49fd7776469f18348174b3ff1
+>>>>>>> ef4b9c62daa363d4fa11644bdc2050b2dcf90f29

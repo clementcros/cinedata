@@ -3,13 +3,13 @@
     <fieldset>
 
         <!-- Form Name -->
-        <legend>Retrouver votre mot de passe</legend>
+        <legend>Retrouvez votre mot de passe</legend>
 
         <!-- Text input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="email">Votre email</label>
+            <label class="col-md-4 control-label" for="email">Email</label>
             <div class="col-md-4">
-                <input id="email" name="email" type="text" placeholder="email" class="form-control input-md">
+                <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md">
 
             </div>
         </div>
@@ -18,7 +18,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="submit"></label>
             <div class="col-md-4">
-                <button id="Submit" name="Submit" class="btn btn-success">Validé</button>
+                <button id="Submit" name="Submit" class="btn btn-success">Valider</button>
             </div>
         </div>
 

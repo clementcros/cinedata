@@ -13,14 +13,22 @@ class Scenariolist extends CI_Controller
     {
         parent ::__construct();
         $this->load->model('Scenariolist_model');
+        $this->load->model('User_data_model');
 
     }
 
     public function index(){
 
         $data['article'] = $this->Scenariolist_model->getList();
-      
-        
+        if ($this->session->userdata('currently_logged_in')) {
+            $user = $this->session->userdata('username');
+            $data['user'] = $this->User_data_model->get_data($user);
+        }
+        else {
+            $data['user'][0]['status'] = 'none';
+        }
+
+
         if ($this->session->userdata('currently_logged_in')) {
         $this->load->view('partial/head');
         }

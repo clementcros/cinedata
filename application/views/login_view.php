@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Login Page</title>
+    <title>Connexion</title>
 </head>
 <body>
 <div class="container">
@@ -15,16 +15,16 @@
 
             echo validation_errors();
 
-            echo "<p>Nom d'utilisateur: ";
+            echo "<p>Pseudo ";
             echo form_input('username', $this->input->post('username'));
             echo "</p>";
 
-            echo "<p>Mot de passe: ";
+            echo "<p>Mot de passe ";
             echo form_password('password');
             echo "</p>";
 
             echo "</p>";
-            echo form_submit('login_submit', 'Login');
+            echo form_submit('login_submit', 'Valider');
             echo "</p>";
 
             echo form_close();
@@ -32,7 +32,7 @@
             ?>
             <a class="btn btn-primary" href="<?php echo base_url()."index.php/Main/signin"; ?>" role="button">Inscription</a>
             <br>
-            <a class="btn btn-primary" href="<?php echo base_url()."index.php/Main/reset_password"; ?>" role="button">Mot de passe oublier</a>
+            <a class="btn btn-primary" href="<?php echo base_url()."index.php/Main/reset_password"; ?>" role="button">mot de passe oublié ?</a>
         </div>
     </div>
 

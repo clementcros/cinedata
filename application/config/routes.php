@@ -62,3 +62,4 @@ $route ['admin'] = 'Admin';
 $route ['imdb'] = 'Imdb';
 $route['contact'] = 'Contact';
 
+$route ['salle_cine'] = 'SalleCine';
