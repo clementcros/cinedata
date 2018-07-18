@@ -57,9 +57,8 @@ class Scenario extends CI_Controller
 
         $crud->where('username',$_SESSION['username']);
         $crud->set_theme('datatables');
-        $crud->set_table('scenarios');
-        $crud->set_table('metrage');
-        $crud->set_subject('scenarios');
+        $crud->set_table('metrages');
+        $crud->set_subject('métrage');
         $crud->set_relation('id_user','signup','username');
         $crud->columns('id','id_user','nom','description','file_url', 'image');
         $crud->set_field_upload('file_url','assets/uploads/files');

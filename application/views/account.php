@@ -51,6 +51,17 @@
             </ul>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-xs-12" style="margin-top: 50px">
+            <ul class="list-group">
+                <li class="list-group-item active text-center color"> Mettre en ligne un nouveau métrage</li>
+                <li class="list-group-item text-center"><a class="btn btn-primary"
+                                                           href="<?php echo base_url('index.php/scenario/metrage'); ?>"
+                                                           role="button"">Mettre en ligne</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
 <div class="container">
     <div class="col-md-6">
