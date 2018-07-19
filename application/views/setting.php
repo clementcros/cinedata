@@ -23,6 +23,7 @@
             <label class="col-md-4 control-label" for="selectbasic">Nombres de collones</label>
             <div class="col-md-4">
                 <select id="selectbasic" name="selectbasic" class="form-control">
+                    <option value="4">3</option>
                     <option value="6">2</option>
                     <option value="12">1</option>
                 </select>
