@@ -25,7 +25,7 @@ class Main extends CI_Controller {
         }
         else {
 
-            $this->load->view('partial/head');
+            $this->load->view('partial/head_loggout');
             $this->load->view('login_view');
             $this->load->view('partial/foot');
         }
