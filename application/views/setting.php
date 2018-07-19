@@ -19,6 +19,18 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="selectbasic">Nombres de collones</label>
+            <div class="col-md-4">
+                <select id="selectbasic" name="selectbasic" class="form-control">
+                    <option value="6">2</option>
+                    <option value="12">1</option>
+                </select>
+                <br>
+                <h5>permet l'affichage des métrages et scénario sur 1 ou 2 collones</h5>
+            </div>
+        </div>
+
         <!-- Button -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="singlebutton"></label>

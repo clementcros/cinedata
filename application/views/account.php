@@ -23,7 +23,7 @@
 
         <h2>Mes Scénarios</h2>
         <?php foreach ($article as $article_item): ?>
-            <div class="col-md-6">
+            <div class="col-md-<?php echo $col;?>">
                 <div class="col-xs-12"><h4>Auteur :<?php print_r($article_item['nom']); ?></h4></div>
                 <img src="<?php echo base_url() . '/assets/uploads/files/' . $article_item['image']; ?>" class="img-responsive" alt="Cinque Terre">
 
@@ -45,7 +45,7 @@
 
         <h2>Mes Métrages</h2>
         <?php foreach ($metrage as $article_item): ?>
-            <div class="col-md-6">
+            <div class="col-md-<?php echo $col;?>">
                 <div class="col-xs-12"><h4>Auteur :<?php print_r($article_item['nom']); ?></h4></div>
                 <img src="<?php echo base_url() . '/assets/uploads/files/' . $article_item['image']; ?>" class="img-responsive" alt="Cinque Terre">
 
