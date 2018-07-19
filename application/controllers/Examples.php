@@ -8,6 +8,7 @@ class Examples extends CI_Controller {
 
 		$this->load->database();
 		$this->load->helper('url');
+        $this->load->model('Notification_admin_model');
 
 		$this->load->library('grocery_CRUD');
 	}
@@ -17,8 +18,9 @@ class Examples extends CI_Controller {
 	    if($this->session->userdata('currently_logged_in')){
             $user = $this->session->all_userdata();
             if($user['username'] == "admin"){
-
-                $this->load->view('example.php',(array)$output);
+                $data['notif'] = $this->Notification_admin_model->getnotif();
+                $this->load->view('example.php',$output);
+                $this->load->view('partial/admin.php',$data);
             }
             else{
                 redirect('');
