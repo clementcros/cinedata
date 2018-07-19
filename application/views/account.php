@@ -71,7 +71,7 @@
         if($article != null){
 
 
-        foreach ($article as $article_item):
+        foreach ($metrage as $article_item):
             ?>
             <div class="col-md-<?php echo $col;?>">
                 <div class="col-xs-12"><h4>Auteur :<?php print_r($article_item['nom']); ?></h4></div>
