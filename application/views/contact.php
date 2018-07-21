@@ -49,8 +49,7 @@
 
                     <div class="form-group">
                         <label for="name">Message</label>
-                        <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Tapez votre message">
-                        </textarea>
+                        <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Tapez votre message"></textarea>
                     </div>
 
                     <div class="col-md-12">
