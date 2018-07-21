@@ -1,4 +1,5 @@
 <script src="<?php echo base_url()?>/assets/js/show_more.js"></script>
+<script src="<?php echo base_url()?>/css/account.css"></script>
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
@@ -20,10 +21,19 @@
 </div>
 <div class="container">
     <div class="row">
+        <div class="col-md-12">
+        <ul class="list-group">
+            <li class="list-group-item active color"><h3 class="element">Mes Scénarios</h3></li>
+<!--        <h2>Mes Scénarios :</h2>-->
 
-        <h2>Mes Scénarios</h2>
-        <?php foreach ($article as $article_item): ?>
-            <div class="col-md-6">
+        </ul>
+        <?php
+        if($article != null){
+
+
+        foreach ($article as $article_item):
+            ?>
+            <div class="col-md-<?php echo $col;?>">
                 <div class="col-xs-12"><h4>Auteur :<?php print_r($article_item['nom']); ?></h4></div>
                 <img src="<?php echo base_url() . '/assets/uploads/files/' . $article_item['image']; ?>" class="img-responsive" alt="Cinque Terre">
 
@@ -37,15 +47,33 @@
                 </div>
             </div>
         <?php endforeach; ?>
+      <?php  }
+      else {
+            echo "<br>";
+            echo "<h4>Vous n'avez pas encore de Scénarios n'hésiter pas a mettre en ligne votre premier scénario :)</h4>";
+          echo "<br>";
+      }
+      ?>
+        </div>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
 
-        <h2>Mes Métrages</h2>
-        <?php foreach ($metrage as $article_item): ?>
-            <div class="col-md-6">
+        <div class="col-md-12">
+            <ul class="list-group">
+                <li class="list-group-item active color"><h3 class="element">Mes Métrages</h3></li>
+                <!--        <h2>Mes Scénarios :</h2>-->
+
+            </ul>
+        <?php
+        if($article != null){
+
+
+        foreach ($metrage as $article_item):
+            ?>
+            <div class="col-md-<?php echo $col;?>">
                 <div class="col-xs-12"><h4>Auteur :<?php print_r($article_item['nom']); ?></h4></div>
                 <img src="<?php echo base_url() . '/assets/uploads/files/' . $article_item['image']; ?>" class="img-responsive" alt="Cinque Terre">
 
@@ -59,6 +87,14 @@
                 </div>
             </div>
         <?php endforeach; ?>
+        <?php  }
+        else {
+            echo "<br>";
+            echo "<h4>Vous n'avez pas encore de Métrages, n'hésiter pas a mettre en ligne votre premier métrage :)</h4>";
+            echo "<br>";
+        }
+        ?>
+        </div>
     </div>
 </div>
 </div>
@@ -97,5 +133,9 @@
     .color{
         background-color: <?php echo $color[0]['color']; ?> !important;
         border-color : <?php echo $color[0]['color']; ?> !important;
+    }
+    .element{
+        color: white;
+        text-align: center;
     }
 </style>

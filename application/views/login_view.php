@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Connexion</title>
-</head>
-<body>
-<div class="container">
+<link rel="stylesheet" href="<?php echo base_url()?>/css/login.css">
+
+<br>
+<br>
+<div class="container contain-style">
     <div class="col-md-12">
         <div class="row">
             <h1>Connexion</h1>

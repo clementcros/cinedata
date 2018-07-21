@@ -20,6 +20,7 @@ class Account extends CI_Controller
         $this->load->model('Param_user_model');
         $this->load->library('email');
         $this->load->model('Getcolor_model');
+        $this->load->model('Getcol_model');
     }
 
     public function index(){
@@ -31,6 +32,11 @@ class Account extends CI_Controller
             $user = $this->session->all_userdata();
             $id = $user['username'];
             $color = $this->Getcolor_model->getcolor();
+            $col = $this->Getcol_model->getcol();
+            if($col == null){
+                $col = 6;
+            }
+            $data['col'] = $col[0]['col'];
             $data['color'] = $color;
 
             $data['user'] = $this->User_data_model->get_data($id);
