@@ -1,10 +1,16 @@
+<div class="jumbotron jumbotron-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">Inscription</h1>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="col-md-12">
 <form class="form-horizontal" action="<?php echo base_url('index.php/Main/signin_validation')?>" method="post">
     <fieldset>
-
-        <!-- Form Name -->
-        <legend>Inscription</legend>
 
         <!-- Select Basic -->
         <div class="form-group">
@@ -92,3 +98,30 @@
     </fieldset>
 </form>
 
+        <style>
+            .form-control {
+                border-width:5px;
+                border-style:outset;
+                border-radius: 35px;
+            }
+
+            div.row .h1 {
+                color: orangered;
+            }
+
+            .form-group label {
+                color: orangered;
+            }
+
+            div.col-md-4 button{
+                background-color: orangered;
+                border-color: orangered;
+            }
+            legend {
+                color: orangered;
+                font-size: 63px;
+            }
+            .form-control:active, .form-control:focus {
+                border-color: orangered;
+            }
+        </style>
