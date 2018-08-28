@@ -74,7 +74,7 @@
 						<li class="has-dropdown">
 							<a href="#">Services</a>
 							<ul class="dropdown">
-								<li><a href="#">IMDB</a></li>
+                                <li><a href="<?php echo base_url('index.php/imdb');?>">ImDb</a></li>
 								<li><a href="#">Droits</a></li>
 								<li><a href="<?php echo base_url('index.php/scenariolist') ?>">Scénarios</a></li>
 								<li><a href="#">API</a></li>
