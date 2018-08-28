@@ -52,7 +52,7 @@
     ])
     .directive('movieSrchResults', function() {
       return {
-        templateUrl: '../../movieResults.html'
+        templateUrl: '../movieResults.html'
       };
     });
 })(window.angular);
