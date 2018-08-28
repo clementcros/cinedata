@@ -9,9 +9,10 @@
             <li><a href="#">Forum</a></li>
             <li><a href="<?php echo site_url('examples/scenario_management')?>">Gestion de scénarios</a></li>
             <li><a href="<?php echo site_url('examples/contact')?>">Messages contacts</a></li>
-            <span style="background-color:red;color:white;font-weight:bold;border-radius:30px;box-shadow:1px 1px 1px gray;padding:2px 3px 2px 4px;top: -6px;right:-6px;font-size:1em;"><?php echo $notif[0]['COUNT(signup.user_activation)'];?></span>
-            <li><a   href="<?php echo base_url('index.php/main/logout'); ?>">Déconnexion</a></li>
-            <li><a href="<?php echo site_url('examples/offices_management')?>">Utilisateurs</a></li>
+            <li><a href="<?php echo site_url('examples/event')?>">Gestion des Event</a></li>
+            <li><a href="<?php echo site_url('examples/event_subscribe')?>">Gestion des inscriptions</a></li>
+            <li><a href="<?php echo site_url('examples/offices_management')?>">Utilisateurs <span style="background-color:red;color:white;font-weight:bold;border-radius:30px;box-shadow:1px 1px 1px gray;padding:2px 3px 2px 4px;top: -6px;right:-6px;font-size:1em;"><?php echo $notif[0]['COUNT(signup.user_activation)'];?></span></a></li>
+            <li><a href="<?php echo base_url('index.php/main/logout'); ?>">Déconnexion</a></li>
         </ul>
     </div>
 </nav>

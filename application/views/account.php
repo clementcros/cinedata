@@ -105,7 +105,7 @@
                 <li class="list-group-item active text-center color"> Mettre en ligne un nouveau scénario</li>
                 <li class="list-group-item text-center"><a class="btn btn-primary"
                                                            href="<?php echo base_url('index.php/scenario/example_with_or_where'); ?>"
-                                                           role="button"">Mettre en ligne</a></li>
+                                                           role="button"">ajouter/modifier</a></li>
             </ul>
         </div>
     </div>
@@ -116,7 +116,18 @@
                 <li class="list-group-item active text-center color"> Mettre en ligne un nouveau métrage</li>
                 <li class="list-group-item text-center"><a class="btn btn-primary"
                                                            href="<?php echo base_url('index.php/scenario/metrage'); ?>"
-                                                           role="button"">Mettre en ligne</a></li>
+                                                           role="button"">Majouter/modifier</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12" style="margin-top: 50px">
+            <ul class="list-group">
+                <li class="list-group-item active text-center color"> s'inscrire a un évènement</li>
+                <li class="list-group-item text-center"><a class="btn btn-primary"
+                                                           href="<?php echo base_url('index.php/event'); ?>"
+                                                           role="button"">Inscription</a></li>
             </ul>
         </div>
     </div>

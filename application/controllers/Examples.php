@@ -40,6 +40,51 @@ class Examples extends CI_Controller {
 		$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
 	}
 
+    public function event()
+    {
+        try{
+            $crud = new grocery_CRUD();
+
+            $crud->set_theme('datatables');
+            $crud->set_table('event');
+            $crud->set_subject('évènements');
+            $crud->columns('id','name','description','image_1', 'image_2','image_3', 'price', 'quantity', 'localisation');
+            $crud->set_field_upload('image_1','assets/uploads/files');
+            $crud->set_field_upload('image_2','assets/uploads/files');
+            $crud->set_field_upload('image_3','assets/uploads/files');
+
+
+            $output = $crud->render();
+
+            $this->_example_output($output);
+
+        }catch(Exception $e){
+            show_error($e->getMessage().' --- '.$e->getTraceAsString());
+        }
+    }
+
+    public function event_subscribe()
+    {
+        try{
+            $crud = new grocery_CRUD();
+
+            $crud->set_theme('datatables');
+            $crud->set_table('event_subscribe');
+            $crud->set_subject('évènements');
+            $crud->columns('id','id_event','id_user','date_subscribe');
+            $crud->set_relation('id_event','event','name');
+            $crud->set_relation('id_user','signup','username');
+
+
+            $output = $crud->render();
+
+            $this->_example_output($output);
+
+        }catch(Exception $e){
+            show_error($e->getMessage().' --- '.$e->getTraceAsString());
+        }
+    }
+
         public function offices_management()
 	{
 		try{
@@ -65,7 +110,7 @@ class Examples extends CI_Controller {
 
             $crud->set_theme('datatables');
             $crud->set_table('droit');
-            $crud->set_subject('articles li� aux droits');
+            $crud->set_subject('articles lié aux droits');
             $crud->columns('id','title','texte','link');
 
             $output = $crud->render();
